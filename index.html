@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Practical 7B
+      Filename:   cfp_register.html
+
+   -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pets Care Seminar Registration Form</title>
+    <link rel="stylesheet" href="cfp_base.css" />
+    <link rel="stylesheet" href="cfp_styles.css" />
+    <link rel="stylesheet" href="cfp_forms.css" />
+    <link rel="stylesheet" href="cfp_validate.css" />
+    <script src="cfp_script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="cfp_logo.png" alt="Pets Care Seminar" id="logoimg" />
+    </header>
+    <nav>
+      <ul>
+        <li class="newgroup"><a href="#">home page</a></li>
+        <li><a href="#">opening address</a></li>
+        <li class="newgroup"><a href="#">main session</a></li>
+        <li><a href="#">workshops</a></li>
+        <li class="newgroup"><a href="#">steering committees</a></li>
+        <li><a href="#">working committe</a></li>
+        <li class="newgroup"><a href="#">registration</a></li>
+        <li><a href="#">payments</a></li>
+        <li class="newgroup"><a href="#">Pets Care home page</a></li>
+        <li><a href="#">links</a></li>
+      </ul>
+    </nav>
+    <section>
+      <h1>Seminar Registration Form</h1>
+      <p>Required Item (*)</p>
+      <form action="">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" />
+        <label for="firstName">First Name*</label>
+        <input type="text" name="firstName" id="firstName" required />
+        <label for="lastName">Last Name*</label>
+        <input type="text" name="lastName" id="lastName" required />
+        <label for="address">Address*</label>
+        <input type="text" name="address" id="address" required />
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" required />
+        <label for="phone">Phone Number*</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="+65XXXXXXXX"
+          pattern="^(?:\+65)?[689]\d{7}$"
+          required
+        />
+        <label for="category">Registration Category</label>
+        <select name="category" id="category">
+          <option value="guest">Guest ($10)</option>
+          <option value="deluxe">Deluxe ($20)</option>
+          <option value="premium">Premium ($50)</option>
+        </select>
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <aside>
+      <dl>
+        <dt>Member ($20)</dt>
+        <dd>Eligible to attend all sessions</dd>
+        <dt>Non-Member ($25)</dt>
+        <dd>Eligible to attend all sessions</dd>
+        <dt>Guest ($5)</dt>
+        <dd>Eligible to attend msin session only</dd>
+      </dl>
+    </aside>
+
+    <footer>Pets Care Seminar 2018 &copy; Singapore Polytechnic</footer>
+  </body>
+</html>

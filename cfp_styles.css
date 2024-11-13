@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/*
+   Practical 7B  
+   Filename: cg_styles.css
+
+*/
+
+
+/* HTML and Body styles */
+
+html {
+   background: rgb(51, 51, 51) url(cfp_back.png);
+   font-family: Verdana, Geneva, sans-serif;
+   height: 100%;
+}
+
+body {
+   background-color: white;
+   box-shadow: grey 20px 0px 40px,  grey -20px 0px 40px;
+   border-left: 3px solid black;
+   border-right: 3px solid black;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;    
+   margin: 0px auto;
+   min-width: 320px;
+   max-width: 1020px;  
+   width: 100%;
+}
+
+
+/* Header styles */
+
+header {
+   width: 100%;
+}
+
+header img#logoimg {
+   display: block;
+   width: 100%;
+}
+
+/* Navigation Styles */
+
+nav {  
+   width: 100%;
+}
+
+nav ul {
+   background: linear-gradient(to bottom, rgb(250, 131, 131), pink);
+        
+   -moz-column-width: 150px;
+   -webkit-column-width: 150px;
+    column-width: 150px;
+
+   -moz-column-gap: 25px;
+   -webkit-column-gap: 25px;
+    column-gap: 25px;
+    
+    padding: 15px;
+}
+
+nav ul li.newgroup {
+   margin-top: 5px;
+}
+
+nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 0.9em;
+}
+
+nav a:hover {
+   color: rgb(245, 0, 0);
+   text-decoration: underline;
+}
+
+/* Section Styles */
+
+section {
+   background: whitesmoke;
+   -webkit-flex: 2 1 421px;
+   flex: 2 1 421px; 
+   padding: 10px 20px 20px 40px; 
+}
+
+section h1 {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+   font-size: 1.8em;
+   margin: 20px 0px 5px;
+   color: rgb(250, 131, 131);
+}
+
+section > p {
+   margin-bottom: 20px;
+   padding-bottom: 9px;
+   border-bottom: 3px solid rgb(177, 177, 177);
+}
+
+
+/* Aside Styles */
+
+aside {
+   background: rgb(105, 105, 105);
+   color: rgb(250, 131, 131);
+   -webkit-flex: 1 2 220px;
+   flex: 1 2 220px ;
+   padding: 25px;    
+}
+
+dt {
+   font-size: 1em;
+   border-bottom: 1px solid white;
+   font-weight: bold;
+}
+
+dd {
+   margin-bottom: 25px;
+}
+
+dl a {
+   color: gold;
+}
+
+/* Footer styles */   
+
+footer {
+   color: white;    
+   background: rgb(236, 116, 116);  
+   height: 70px;
+   padding-top: 20px;
+   text-align: center;
+   font-size: 0.9em; 
+   width: 100%;
+}
+
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   section h1 {
+      font-size: 1.5em;
+   }
+   
+   section p {
+      font-size: 0.9em;
+   }
+   
+   nav {
+      -webkit-order: 99;
+      order: 99;
+   }
+   
+   footer {
+      -webkit-order: 100;
+      order: 100;
+   }
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+   body header nav ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   }
+   
+   body header nav ul li {
+     -webkit-flex: 0 1 auto;
+     flex: 0 1 auto;
+   }
+   }
+   

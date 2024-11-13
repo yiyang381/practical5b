@@ -1,0 +1,76 @@
+/*
+   Practical 7B
+   Filename: cg_forms.css
+*/
+
+/* Form Layout Styles */
+
+label
+{
+   display: block;
+   float: left;
+   clear: left;
+   margin: 5px;
+   width: 200px;
+}
+
+input, select, textarea
+{
+   display: block;
+   margin: 15px;
+   width: 300px;
+   border-radius: 10px;
+   height: 30px;
+   text-indent: 10px;
+   font-size: 1.1em;
+}
+
+textarea
+{
+   height: 100px;
+}
+
+button
+{
+   background-color: rgb(241, 157, 157);
+   color: rgb(245, 245, 165);
+   border-radius: 20px;
+   float: none;
+   display: inline;
+   font-size: 1.1em;
+   height: 30px;
+   width: 150px;
+   align-items: center;
+   margin-top: 50px;
+   margin-left: 250px;
+   margin-bottom: 20px;
+   cursor: pointer;
+}
+input:focus {
+   background-color: lightyellow;  /* background color when focused */
+   border: 2px solid lightblue;    /* border color when focused */
+}
+
+
+/* This part will apply to inputs with validation, but only when they are in focus */
+input[required]:focus:valid,
+input[pattern]:focus:valid,
+input[type="email"]:focus:valid,
+input[type="tel"]:focus:valid {
+   background-color: lightgreen;
+   background-image: url('./cfp_valid.png');
+   background-repeat: no-repeat;
+   background-position: bottom right;
+   background-size: contain;
+}
+
+input[required]:focus:invalid,
+input[pattern]:focus:invalid,
+input[type="email"]:focus:invalid,
+input[type="tel"]:focus:invalid {
+   background-color: lightcoral;
+   background-image: url('./cfp_invalid.png');
+   background-repeat: no-repeat;
+   background-position: bottom right;
+   background-size: contain;
+}
